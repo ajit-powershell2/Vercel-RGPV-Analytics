@@ -50,11 +50,6 @@
   font-weight: 500;
 }
 
-@media (max-width: 420px) {
-  .brand__thin {
-    display: none;
-  }
-}
 
 /* ---- Desktop nav ---- */
 .nav__desktop {
