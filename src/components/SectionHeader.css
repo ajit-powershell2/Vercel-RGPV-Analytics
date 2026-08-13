@@ -1,0 +1,39 @@
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.section-header__text .eyebrow {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-header__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.1;
+  color: var(--navy);
+  letter-spacing: -0.015em;
+}
+
+@media (max-width: 640px) {
+  .section-header__title {
+    font-size: 26px;
+  }
+}
+
+.section-header__subtitle {
+  margin: 8px 0 0;
+  font-size: 14.5px;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+.section-header__action {
+  flex-shrink: 0;
+}

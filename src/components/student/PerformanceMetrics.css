@@ -1,0 +1,82 @@
+.perf__heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 18px;
+}
+
+.perf__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 720px) {
+  .perf__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.perf__metric {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface-sunken);
+}
+
+/* CGPA is the headline number — set it apart with the navy field */
+.perf__metric--primary {
+  background: var(--navy);
+}
+.perf__metric--primary .perf__value {
+  color: #fff;
+}
+.perf__metric--primary .perf__label {
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.perf__value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+.perf__value--compact {
+  font-size: 21px;
+}
+
+.perf__label {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.perf__note {
+  color: var(--faint);
+  font-weight: 500;
+}
+
+.perf__callout {
+  margin: 18px 0 0;
+  padding: 13px 16px;
+  border-radius: var(--r-sm);
+  background: var(--accent-tint);
+  color: var(--accent-strong);
+  font-size: 14px;
+  text-align: center;
+}
+
+.perf__caveat {
+  margin: 12px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.55;
+}

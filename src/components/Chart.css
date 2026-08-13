@@ -1,0 +1,15 @@
+.chart-box {
+  position: relative;
+  width: 100%;
+}
+
+.chart-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 24px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--muted);
+}

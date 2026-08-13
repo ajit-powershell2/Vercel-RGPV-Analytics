@@ -1,0 +1,107 @@
+/* ---- Hero ---- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  color: #fff;
+  border-radius: var(--r-lg);
+  padding: 56px 40px;
+  text-align: center;
+}
+
+/* Subtle depth without decorative blobs — a faint diagonal wash */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    130deg,
+    rgba(191, 111, 58, 0.16),
+    transparent 46%
+  );
+  pointer-events: none;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .eyebrow {
+  color: #d8a678;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1.08;
+  margin: 14px 0 0;
+  letter-spacing: -0.02em;
+}
+
+.hero__lead {
+  margin: 14px auto 0;
+  max-width: 46ch;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero__search {
+  max-width: 520px;
+  margin: 28px auto 0;
+  text-align: left;
+}
+
+.hero__search .searchbar__label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 40px 22px;
+  }
+  .hero__title {
+    font-size: 30px;
+  }
+  .hero__lead {
+    font-size: 15px;
+  }
+}
+
+/* ---- Section heads ---- */
+.overview__section-head {
+  margin-bottom: 18px;
+}
+
+.overview__section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--navy);
+}
+
+.overview__section-sub {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ---- Donut + secondary stats split ---- */
+.overview__split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (min-width: 860px) {
+  .overview__split {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+.overview__caveat {
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.footer__inner {
+  padding: 32px 24px 40px;
+  text-align: center;
+}
+
+.footer__brand {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.footer .disclaimer {
+  max-width: 62ch;
+  margin: 0 auto;
+}

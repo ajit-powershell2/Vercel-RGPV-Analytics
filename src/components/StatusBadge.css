@@ -1,0 +1,33 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--r-pill);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.badge--pass {
+  background: var(--pass-tint);
+  color: var(--pass);
+}
+
+.badge--fail {
+  background: var(--fail-tint);
+  color: var(--fail);
+}
+
+.badge--neutral {
+  background: var(--accent-tint);
+  color: var(--accent-strong);
+}

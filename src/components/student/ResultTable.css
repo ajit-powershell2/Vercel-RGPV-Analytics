@@ -1,0 +1,88 @@
+.result-table {
+  width: 100%;
+}
+
+.result-table__head,
+.result-table__row {
+  display: grid;
+  grid-template-columns: 120px 1fr 90px;
+  gap: 12px;
+  align-items: center;
+}
+
+.result-table__head {
+  padding: 0 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+}
+
+.result-table__row {
+  padding: 13px 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.result-table__row:last-child {
+  border-bottom: none;
+}
+
+.result-table__code {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.result-table__name {
+  color: var(--ink-soft);
+}
+
+.result-table__grade-col {
+  text-align: right;
+}
+
+.grade-pill {
+  display: inline-block;
+  padding: 3px 11px;
+  border-radius: var(--r-xs);
+  background: var(--navy-tint);
+  color: var(--navy);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.result-table__empty {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---- Mobile: stack each row into a labeled card ---- */
+@media (max-width: 560px) {
+  .result-table__head {
+    display: none;
+  }
+
+  .result-table__row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "code grade"
+      "name grade";
+    gap: 4px 12px;
+    padding: 14px 4px;
+  }
+
+  .result-table__code {
+    grid-area: code;
+  }
+  .result-table__name {
+    grid-area: name;
+    font-size: 13px;
+  }
+  .result-table__grade-col {
+    grid-area: grade;
+    align-self: center;
+  }
+}

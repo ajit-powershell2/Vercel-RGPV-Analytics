@@ -1,0 +1,14 @@
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (min-width: 720px) {
+  .stat-grid[data-columns="3"] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .stat-grid[data-columns="4"] {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,67 @@
+.stat-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* Thin top rule communicates state without shouting */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--line-strong);
+}
+.stat-card--pass::before {
+  background: var(--pass);
+}
+.stat-card--fail::before {
+  background: var(--fail);
+}
+.stat-card--accent::before {
+  background: var(--accent);
+}
+
+.stat-card__label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+}
+
+.stat-card--pass .stat-card__value {
+  color: var(--pass);
+}
+.stat-card--fail .stat-card__value {
+  color: var(--fail);
+}
+
+.stat-card__hint {
+  font-size: 12px;
+  color: var(--faint);
+}
+
+@media (max-width: 640px) {
+  .stat-card {
+    padding: 16px 16px 18px;
+  }
+  .stat-card__value {
+    font-size: 24px;
+  }
+}

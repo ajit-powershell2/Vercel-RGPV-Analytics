@@ -1,0 +1,74 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.16s ease,
+    border-color 0.16s ease,
+    color 0.16s ease,
+    transform 0.1s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--md {
+  padding: 11px 20px;
+  font-size: 14.5px;
+}
+
+.btn--sm {
+  padding: 7px 14px;
+  font-size: 13px;
+}
+
+.btn--primary {
+  background: var(--navy);
+  color: #fff;
+}
+.btn--primary:hover {
+  background: var(--navy-hover);
+}
+
+.btn--ghost {
+  background: var(--surface);
+  color: var(--navy);
+  border-color: var(--line-strong);
+}
+.btn--ghost:hover {
+  background: var(--surface-sunken);
+  border-color: var(--muted);
+}
+
+.btn--accent {
+  background: var(--accent);
+  color: #fff;
+}
+.btn--accent:hover {
+  background: var(--accent-strong);
+}
+
+/* Segmented toggle-style ghost used for chart metric switches */
+.btn--toggle {
+  background: transparent;
+  color: var(--muted);
+  border-color: transparent;
+  padding: 7px 14px;
+  font-size: 13px;
+  border-radius: var(--r-xs);
+}
+.btn--toggle:hover {
+  color: var(--ink);
+}
+.btn--toggle[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+}

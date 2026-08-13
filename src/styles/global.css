@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* ============================================================
+   Design tokens
+   ============================================================ */
+:root {
+  /* Color — deep navy, soft blue-gray neutrals, restrained terracotta accent.
+     The page rests on a muted navy-tinted blue-gray (not white, not dark);
+     cards sit slightly lighter on top of it for clear visual hierarchy. */
+  --bg: #e7ecf3;
+  --bg-tint: #dbe2ee;
+  --surface: #ffffff;
+  --surface-sunken: #eef2f8;
+
+  --ink: #16202e;
+  --ink-soft: #3a475a;
+  --muted: #5d6a7c;
+  --faint: #8a94a4;
+
+  --navy: #12233b;
+  --navy-hover: #0b1728;
+  --navy-tint: #dde6f1;
+
+  --accent: #bf6f3a;
+  --accent-strong: #a85c2b;
+  --accent-tint: #f4e7db;
+
+  --pass: #2f7d5b;
+  --pass-tint: #e2f0e9;
+  --fail: #b0413f;
+  --fail-tint: #f6e7e7;
+
+  --gold: #a97f2b;
+  --gold-tint: #f4edd6;
+  --silver: #5f6b78;
+  --silver-tint: #e7ecf2;
+  --bronze: #9a5a33;
+  --bronze-tint: #f0e4da;
+
+  --line: #d5dde8;
+  --line-strong: #bfc9d8;
+
+  /* Radius */
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-pill: 999px;
+
+  /* Shadow — subtle, restrained */
+  --shadow-sm: 0 1px 2px rgba(18, 32, 51, 0.04);
+  --shadow-md: 0 1px 2px rgba(18, 32, 51, 0.05), 0 8px 24px -12px rgba(18, 32, 51, 0.14);
+
+  /* Spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  /* Type */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+
+  --maxw: 1120px;
+}
+
+/* ============================================================
+   Reset
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img,
+svg,
+canvas {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+input,
+select,
+button {
+  font-size: 15px;
+}
+
+::selection {
+  background: var(--accent-tint);
+  color: var(--accent-strong);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--r-xs);
+}
+
+/* ============================================================
+   Layout helpers
+   ============================================================ */
+.wrap {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 16px;
+  }
+}
+
+.page {
+  padding: 40px 0 80px;
+  animation: page-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 24px 0 56px;
+  }
+}
+
+@keyframes page-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stack-6 > * + * {
+  margin-top: var(--sp-6);
+}
+.stack-4 > * + * {
+  margin-top: var(--sp-4);
+}
+.stack-8 > * + * {
+  margin-top: var(--sp-8);
+}
+
+/* ============================================================
+   Utility text
+   ============================================================ */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
+.disclaimer {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
