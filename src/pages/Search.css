@@ -101,7 +101,7 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 18px;
-  color: var(--navy);
+  color: var(--heading);
   line-height: 1.1;
 }
 

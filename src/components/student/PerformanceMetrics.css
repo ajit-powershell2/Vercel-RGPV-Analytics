@@ -1,7 +1,7 @@
 .perf__heading {
   font-size: 15px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--heading);
   margin-bottom: 18px;
 }
 
@@ -44,7 +44,7 @@
   font-size: 30px;
   line-height: 1;
   letter-spacing: -0.02em;
-  color: var(--navy);
+  color: var(--heading);
 }
 
 .perf__value--compact {

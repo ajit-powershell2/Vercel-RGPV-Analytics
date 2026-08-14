@@ -12,7 +12,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.55),
+    var(--shimmer),
     transparent
   );
   animation: shimmer 1.5s ease-in-out infinite;
@@ -46,7 +46,7 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 19px;
-  color: var(--navy);
+  color: var(--heading);
   margin-bottom: 8px;
 }
 

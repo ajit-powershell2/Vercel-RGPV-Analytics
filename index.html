@@ -9,6 +9,18 @@
       content="Check your RGPV semester result and browse university-wide analytics."
     />
     <title>RGPV Result Analytics</title>
+    <!-- Apply the saved theme before first paint to avoid a light->dark flash
+         on refresh. Light remains the default for first-time visitors. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("rgpv-theme")
+          if (t === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark")
+          }
+        } catch (e) {}
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

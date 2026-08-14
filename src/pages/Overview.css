@@ -79,7 +79,7 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 22px;
-  color: var(--navy);
+  color: var(--heading);
 }
 
 .overview__section-sub {

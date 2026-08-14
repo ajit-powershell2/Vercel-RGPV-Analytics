@@ -116,7 +116,7 @@ export default function Student() {
         <Panel style={{ marginTop: 8 }}>
           <StateBlock
             title="Result not available yet"
-            message={`We don't have a stored result for ${enrollment} yet. It may not have been scraped and added to our database so far — check back later.`}
+            message={`We don't have a stored result for ${enrollment} yet. It may not have been added to our database so far — check back later.`}
             action={
               <Button variant="ghost" onClick={() => navigate("/overview")}>
                 Search another enrollment

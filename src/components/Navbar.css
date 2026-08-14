@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--nav-bg);
   backdrop-filter: saturate(1.2) blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -41,7 +41,7 @@
 .brand__text {
   font-weight: 700;
   font-size: 16px;
-  color: var(--navy);
+  color: var(--heading);
   letter-spacing: -0.01em;
 }
 
@@ -50,6 +50,17 @@
   font-weight: 500;
 }
 
+
+/* ---- Theme toggle placement ----
+   On mobile the desktop nav is hidden, so the toggle pushes to the far right
+   opposite the brand. On desktop the nav takes margin-left:auto and the
+   toggle simply follows it at the very end of the header. */
+.nav__toggle {
+  flex-shrink: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
 
 /* ---- Desktop nav ---- */
 .nav__desktop {
@@ -75,7 +86,7 @@
 }
 
 .nav__link--active {
-  color: var(--navy);
+  color: var(--heading);
 }
 
 .nav__link--active::after {
@@ -92,6 +103,11 @@
 @media (min-width: 860px) {
   .nav__desktop {
     display: flex;
+  }
+  /* Nav already claims the auto margin; the toggle sits right after it with a
+     small gap at the far right of the header. */
+  .nav__toggle {
+    margin-left: 8px;
   }
 }
 

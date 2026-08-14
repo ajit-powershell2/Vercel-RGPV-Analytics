@@ -75,7 +75,7 @@ export default function FailedStudents() {
       </Panel>
 
       <p className="disclaimer failed__caveat">
-        Reflects analyzed / scraped enrollments only, not the full official RGPV student body.
+        Reflects analyzed enrollments only, not the full official RGPV student body.
       </p>
     </div>
   )

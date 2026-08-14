@@ -11,6 +11,10 @@
   --bg-tint: #dbe2ee;
   --surface: #ffffff;
   --surface-sunken: #eef2f8;
+  /* Header backdrop — semi-transparent so the sticky blur reads through it */
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  /* Skeleton shimmer sweep */
+  --shimmer: rgba(255, 255, 255, 0.55);
 
   --ink: #16202e;
   --ink-soft: #3a475a;
@@ -20,6 +24,9 @@
   --navy: #12233b;
   --navy-hover: #0b1728;
   --navy-tint: #dde6f1;
+  /* Heading/emphasis text. In light mode this equals --navy so the design is
+     unchanged; in dark mode it flips to a light ink for readability. */
+  --heading: #12233b;
 
   --accent: #bf6f3a;
   --accent-strong: #a85c2b;
@@ -68,6 +75,67 @@
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
 
   --maxw: 1120px;
+}
+
+/* ============================================================
+   Dark theme — same layout, transformed into a professional
+   navy/slate palette. Applied via [data-theme="dark"] on <html>.
+   ============================================================ */
+[data-theme="dark"] {
+  --bg: #0b1220;
+  --bg-tint: #101a2c;
+  --surface: #16233a;
+  --surface-sunken: #101c30;
+  --nav-bg: rgba(15, 23, 42, 0.9);
+  --shimmer: rgba(255, 255, 255, 0.06);
+
+  --ink: #f8fafc;
+  --ink-soft: #cbd5e1;
+  --muted: #94a3b8;
+  --faint: #6b7a90;
+
+  /* Used as an elevated dark surface (hero, buttons, active chips). */
+  --navy: #1e293b;
+  --navy-hover: #273549;
+  --navy-tint: #1b2942;
+  /* Heading text flips light so titles stay readable. */
+  --heading: #f8fafc;
+
+  --accent: #d99a5b;
+  --accent-strong: #e6a869;
+  --accent-tint: #2a2016;
+
+  --pass: #45b183;
+  --pass-tint: #10251c;
+  --fail: #e06b68;
+  --fail-tint: #2b1615;
+
+  --gold: #cda44e;
+  --gold-tint: #29230f;
+  --silver: #9aa7b6;
+  --silver-tint: #1c2739;
+  --bronze: #c07d52;
+  --bronze-tint: #271910;
+
+  --line: #26364f;
+  --line-strong: #33465f;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Smooth, subtle transition when toggling themes. Element-specific
+   transitions (hover states, etc.) keep their own timing thanks to
+   higher specificity. */
+html,
+body,
+*::before,
+*::after,
+* {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.25s ease;
 }
 
 /* ============================================================

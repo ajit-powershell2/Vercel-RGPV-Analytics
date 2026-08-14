@@ -42,7 +42,7 @@
   font-size: 30px;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: var(--navy);
+  color: var(--heading);
 }
 
 .stat-card--pass .stat-card__value {

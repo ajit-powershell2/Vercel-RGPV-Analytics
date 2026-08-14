@@ -50,7 +50,7 @@
   justify-content: center;
   border-radius: var(--r-sm);
   background: var(--navy-tint);
-  color: var(--navy);
+  color: var(--accent-strong);
   font-weight: 700;
   font-size: 13px;
 }
@@ -103,6 +103,6 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 18px;
-  color: var(--navy);
+  color: var(--heading);
   flex-shrink: 0;
 }

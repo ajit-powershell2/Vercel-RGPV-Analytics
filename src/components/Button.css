@@ -39,7 +39,7 @@
 
 .btn--ghost {
   background: var(--surface);
-  color: var(--navy);
+  color: var(--heading);
   border-color: var(--line-strong);
 }
 .btn--ghost:hover {
@@ -69,6 +69,6 @@
 }
 .btn--toggle[aria-pressed="true"] {
   background: var(--surface);
-  color: var(--navy);
+  color: var(--heading);
   box-shadow: var(--shadow-sm);
 }

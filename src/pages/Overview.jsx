@@ -117,7 +117,7 @@ export default function Overview() {
             </div>
 
             <p className="disclaimer overview__caveat">
-              Data reflects analyzed / scraped enrollments, not the full official
+              Data reflects analyzed enrollments, not the full official
               RGPV student body.
             </p>
           </div>

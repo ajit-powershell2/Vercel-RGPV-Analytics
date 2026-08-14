@@ -186,7 +186,7 @@ export default function Analytics() {
       </div>
 
       <p className="disclaimer analytics__caveat">
-        Aggregated from analyzed / scraped enrollments only, not the full official RGPV student body.
+        Aggregated from analyzed enrollments only, not the full official RGPV student body.
       </p>
     </div>
   )

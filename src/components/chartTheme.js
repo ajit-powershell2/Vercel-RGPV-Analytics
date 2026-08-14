@@ -1,11 +1,32 @@
 // Shared Chart.js palette + defaults so every chart reads as one system.
+// Colors are resolved from the live CSS custom properties so charts follow
+// the active light/dark theme. Read them lazily (per chart build) so a theme
+// switch picks up the new values when charts are rebuilt.
+function cssVar(name, fallback) {
+  if (typeof window === "undefined") return fallback
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim()
+  return v || fallback
+}
+
 export const CHART = {
-  navy: "#12233b",
-  accent: "#bf6f3a",
-  pass: "#2f7d5b",
-  fail: "#b0413f",
-  grid: "#dde3ec",
-  ticks: "#5d6a7c",
+  get navy() {
+    return cssVar("--heading", "#12233b")
+  },
+  get accent() {
+    return cssVar("--accent", "#bf6f3a")
+  },
+  get pass() {
+    return cssVar("--pass", "#2f7d5b")
+  },
+  get fail() {
+    return cssVar("--fail", "#b0413f")
+  },
+  get grid() {
+    return cssVar("--line", "#dde3ec")
+  },
+  get ticks() {
+    return cssVar("--muted", "#5d6a7c")
+  },
   font: '"Inter", system-ui, sans-serif',
 }
 

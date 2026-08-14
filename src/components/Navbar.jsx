@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom"
+import ThemeToggle from "./ThemeToggle.jsx"
 import "./Navbar.css"
 
 const LINKS = [
@@ -35,6 +36,12 @@ export default function Navbar() {
             </NavLink>
           ))}
         </nav>
+
+        {/* Theme toggle: sits at the far right of the header on desktop
+            (after the nav) and opposite the brand on mobile. */}
+        <div className="nav__toggle">
+          <ThemeToggle />
+        </div>
       </div>
 
       {/* Mobile-only: a horizontal, scrollable strip of links below the brand

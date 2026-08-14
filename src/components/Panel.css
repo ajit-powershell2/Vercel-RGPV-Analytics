@@ -24,7 +24,7 @@
 .panel__title {
   font-size: 15px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--heading);
 }
 
 .panel__subtitle {
