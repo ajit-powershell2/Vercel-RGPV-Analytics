@@ -9,8 +9,20 @@
       content="Check your RGPV semester result and browse university-wide analytics."
     />
     <title>RGPV Result Analytics</title>
-    <script type="module" crossorigin src="/assets/index-Biv8ylcM.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-izWIT4z7.css">
+    <!-- Apply the saved theme before first paint to avoid a light->dark flash
+         on refresh. Light remains the default for first-time visitors. -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("rgpv-theme")
+          if (t === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark")
+          }
+        } catch (e) {}
+      })()
+    </script>
+    <script type="module" crossorigin src="/assets/index-D2PVgGlZ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-6cUJOOSV.css">
   </head>
   <body>
     <div id="root"></div>
