@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate, useLocation } from "react-router-dom"
 import { useEffect } from "react"
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react"
 import Navbar from "./components/Navbar.jsx"
 import Footer from "./components/Footer.jsx"
 import Overview from "./pages/Overview.jsx"
@@ -35,6 +36,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <VercelAnalytics />
     </>
   )
 }
