@@ -96,9 +96,13 @@
   align-items: start;
 }
 
+.overview__split > .stat-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
 @media (min-width: 860px) {
   .overview__split {
-    grid-template-columns: 1.15fr 1fr;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   }
 }
 

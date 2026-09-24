@@ -27,7 +27,9 @@ export const CHART = {
   get ticks() {
     return cssVar("--muted", "#5d6a7c")
   },
-  font: '"Inter", system-ui, sans-serif',
+  get font() {
+    return cssVar("--font-sans", 'Arial, "Helvetica Neue", Helvetica, sans-serif')
+  },
 }
 
 export const baseFont = { family: CHART.font, size: 12 }

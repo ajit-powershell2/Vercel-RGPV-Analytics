@@ -40,8 +40,8 @@
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 30px;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  letter-spacing: normal;
   color: var(--heading);
 }
 
